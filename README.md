@@ -1,47 +1,59 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/wait.h>
- 
-int main()
-{
-    pid_t pid;
-    int status;
- 
-    printf("Parent process: PID = %d\n", getpid());
- 
-    pid = fork();
- 
-    if (pid < 0) {
-         
-        perror("fork failed");
-        exit(1);
-    }
-    else if (pid == 0) {
-         
-        printf("Child process: PID = %d, Parent PID = %d\n",
-               getpid(), getppid());
-        printf("Child is about to execute 'ls -l' using execlp()\n");
- 
-        execlp("ls", "ls", "-l", NULL);
- 
-         
-        perror("execlp failed");
-        exit(1);
-    }
-    else {
-         
-        printf("Parent waiting for child (PID = %d) to finish...\n", pid);
-        wait(&status);
- 
-        if (WIFEXITED(status))
-            printf("Child terminated normally with exit code %d\n",
-                   WEXITSTATUS(status));
-        else
-            printf("Child terminated abnormally\n");
- 
-        printf("Parent process finished execution.\n");
-    }
- 
-    return 0;
-}
+ Operating Systems Laboratory
+
+ CS25C11 – Operating Systems Laboratory
+
+This repository contains 13 Operating Systems Laboratory experiments with programs and sample outputs.
+
+ List of Experiments
+
+1. Basic UNIX Commands
+2. Process Creation using `fork()`, `exec()` and `wait()` System Calls
+3. File Copy using `open()`, `read()` and `write()` System Calls
+4. FCFS CPU Scheduling Algorithm
+5. Non-Preemptive SJF Scheduling Algorithm
+6. Round Robin CPU Scheduling Algorithm
+7. Non-Preemptive Priority Scheduling Algorithm
+8. Producer-Consumer Problem using Synchronization
+9. Dining Philosophers Problem
+10. Banker's Algorithm for Deadlock Avoidance
+11. First Fit, Best Fit and Worst Fit Memory Allocation Algorithms
+12. FIFO, LRU and Optimal Page Replacement Algorithms
+13. SSTF, SCAN and C-SCAN Disk Scheduling Algorithms
+
+ Objectives
+
+* To understand the basic concepts of Operating Systems.
+* To learn process management and CPU scheduling.
+* To implement synchronization techniques.
+* To understand deadlock avoidance and memory management.
+* To learn disk scheduling algorithms.
+
+ Tools Used
+
+* C Programming
+* UNIX/Linux Commands
+* GCC Compiler
+
+ How to Run
+
+1. Open the terminal in Linux or a compatible environment.
+
+2. Compile the C program using:
+
+   `gcc filename.c -o output`
+
+3. Run the program using:
+
+   `./output`
+
+Note: UNIX command experiments can be executed directly in the terminal.
+
+ Author
+
+**Malini Selvam**
+
+B.E. Computer Science and Engineering (Artificial Intelligence and Machine Learning)
+
+Course Code
+
+CS25C11
