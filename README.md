@@ -1,10 +1,10 @@
- Operating Systems Laboratory
+ **Operating Systems Laboratory**
 
- CS25C11 – Operating Systems Laboratory
+ **CS25C11 – Operating Systems Laboratory**
 
 This repository contains 13 Operating Systems Laboratory experiments with programs and sample outputs.
 
- List of Experiments
+ **List of Experiments**
 
 1. Basic UNIX Commands
 2. Process Creation using `fork()`, `exec()` and `wait()` System Calls
@@ -20,7 +20,7 @@ This repository contains 13 Operating Systems Laboratory experiments with progra
 12. FIFO, LRU and Optimal Page Replacement Algorithms
 13. SSTF, SCAN and C-SCAN Disk Scheduling Algorithms
 
- Objectives
+ **Objectives**
 
 * To understand the basic concepts of Operating Systems.
 * To learn process management and CPU scheduling.
@@ -28,13 +28,13 @@ This repository contains 13 Operating Systems Laboratory experiments with progra
 * To understand deadlock avoidance and memory management.
 * To learn disk scheduling algorithms.
 
- Tools Used
+ **Tools Used**
 
 * C Programming
 * UNIX/Linux Commands
 * GCC Compiler
 
- How to Run
+ **How to Run**
 
 1. Open the terminal in Linux or a compatible environment.
 
@@ -46,14 +46,14 @@ This repository contains 13 Operating Systems Laboratory experiments with progra
 
    `./output`
 
-Note: UNIX command experiments can be executed directly in the terminal.
+*Note: UNIX command experiments can be executed directly in the terminal.*
 
- Author
+ **Author**
 
 **Malini Selvam**
 
-B.E. Computer Science and Engineering (Artificial Intelligence and Machine Learning)
+ B.E. Computer Science and Engineering (Artificial Intelligence and Machine Learning)
 
-Course Code
+**Course Code**
 
-CS25C11
+  CS25C11
