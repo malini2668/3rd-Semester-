@@ -3,9 +3,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/stat.h>
- 
 #define BUF_SIZE 1024
- 
 int main(int argc, char *argv[])
 {
     int src_fd, dest_fd;
@@ -40,12 +38,10 @@ int main(int argc, char *argv[])
             exit(1);
         }
     }
- 
     if (n_read < 0)
         perror("Error reading source file");
     else
         printf("File '%s' copied to '%s' successfully.\n", src_name, dest_name);
- 
     close(src_fd);
     close(dest_fd);
     return 0;
